@@ -1,0 +1,100 @@
+<!doctype html>
+<link rel="stylesheet" type="text/css"href="hello.css">
+<html>
+<head>
+<meta charset="utf-8">
+<title>CAlc</title>
+</head>
+
+<body>
+<h1 align="center" style="color:coral">CALCULATOR</h1>
+
+<div class="cal">
+<p  id="calc"></p>
+
+<input type="button"id="b1"value="1" monClick="f1(value);">	
+<input type="button"id="b2"value="2" onClick="f1(value);">	
+<input type="button"id="b3"value="3"onClick="f1(value);">	
+<input type="button"id="b4"value="4"onClick="f1(value);">	
+<input type="button"id="b5"value="5"onClick="f1(value);">	
+<input type="button"id="b6"value="6"onClick="f1(value);">	
+<input type="button"id="b7"value="7"onClick="f1(value);">	
+<input type="button"id="b8"value="8"onClick="f1(value);">	
+<input type="button"id="b9"value="9"onClick="f1(value);">	
+<input type="button"id="b10"value="0"onClick="f1(value);">	
+<input type="button"id="b11"value="+"onClick="fadd(temp);"style="margin-left:103px">	
+<input type="button"id="b12"value="-"onClick="fsub(temp);">	
+<input type="button"id="b13"value="*"onClick="fmul(temp);">	
+<input type="button"id="b14"value="/"onClick="fdiv(temp);">	
+<input type="button"id="b15"value="="onClick="fres(temp);">	
+<input type="button"id="b16"value="C"onClick="fback(temp);">	
+
+</div>
+</body>
+</html>
+<script>
+	var d;
+	var x;
+	var z=0;
+	var temp=0;
+	
+	function f1(x)
+	{
+		
+		temp+=x;
+	document.getElementById("calc").innerHTML=temp;
+	}
+	function fadd(c)
+	{
+		d=c;
+	temp=0;
+
+		r=1;
+	}
+	function fsub(c)
+	{
+		d=c;
+	temp=0;
+
+		r=2;
+	}
+	function fmul(c)
+	{
+		d=c;
+	temp=0;
+
+		r=3;
+	}
+	function fdiv(c)
+	{
+		d=c;
+	temp=0;
+		r=4;
+	}
+	function fback()
+	{
+	document.getElementById("calc").innerHTML=0;
+		temp=0;
+	}
+	function fres(f)
+	{
+		if(r==1)
+			{
+				z=parseInt(d)+parseInt(f);
+			}
+			if(r==2)
+			{
+				z=parseInt(d)-parseInt(f);
+			}
+		if(r==3)
+			{
+				z=parseInt(d)*parseInt(f);
+			}
+		if(r==4)
+			{
+				z=parseInt(d)/parseInt(f);
+			}
+		document.getElementById("calc").innerHTML=z;
+					temp=z;
+	}
+	</script>
